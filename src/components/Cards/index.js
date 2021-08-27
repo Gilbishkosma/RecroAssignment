@@ -13,7 +13,7 @@ const Cards = () => {
     useEffect(() => {   
         // a function to fetch posts from the api
         const fetchPosts = async () => {
-            const data = await fetch(`http://jsonplaceholder.typicode.com/posts?_start=${page}&_limit=10`)
+            const data = await fetch(`https://jsonplaceholder.typicode.com/posts?_start=${page}&_limit=10`)
             const fetchedData = await data.json()
             // adding the newly fetched posts with older one
             setPosts(posts => [...posts,...fetchedData])
